@@ -1,5 +1,5 @@
-def compute_tentative(quiz, exam, project):
-    return (0.3 * quiz) + (0.4 * exam) + (0.3 * project)
+def compute_tentative(formative, summative):
+    return (0.3 * formative) + (0.7 * summative)
 
 
 def compute_quarter_grades(q1, t_q2, t_q3, t_q4):
