@@ -8,7 +8,7 @@
 
 def get_adjective(grade):
     if 96 <= grade <= 100:
- return "EXCELLENT", 1.00
+        return "EXCELLENT", 1.00
     elif 90 <= grade <= 95.99:
         return "VERY GOOD", 1.25
     elif 84 <= grade <= 89.99:
