@@ -35,4 +35,32 @@ def get_adjective(grade):
         return "FAILED"
 
 
-# Start here migz
+# ==== START ====
+print("Hello Scholar! Welcome to the PSHS Grade Calculator.\n")
+
+q1 = float(input("Enter Q1 Grade: "))
+
+print("\n--- Q2 Scores ---")
+f2 = float(input("Formative: "))
+s2 = float(input("Summative: "))
+t_q2 = compute_tentative(f2, s2)
+
+print("\n--- Q3 Scores ---")
+f3 = float(input("Formative: "))
+s3 = float(input("Summative: "))
+t_q3 = compute_tentative(f3, s3)
+
+print("\n--- Q4 Scores ---")
+f4 = float(input("Formative: "))
+s4 = float(input("Summative: "))
+t_q4 = compute_tentative(f4, s4)
+
+Q1, Q2, Q3, Q4 = compute_quarter_grades(q1, t_q2, t_q3, t_q4)
+adjective = get_adjective(Q4)
+
+print("\n=== RESULTS ===")
+print(f"Q1: {Q1:.2f}")
+print(f"Q2: {Q2:.2f}")
+print(f"Q3: {Q3:.2f}")
+print(f"Final Grade (Q4): {Q4:.2f}")
+print(f"Adjectival Rating: {adjective}")
